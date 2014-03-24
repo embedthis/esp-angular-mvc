@@ -1,10 +1,10 @@
 {
     "name": "esp-angular-mvc",
     "description": "ESP Angular MVC Application Skeleton",
-    "version": "0.9.0",
+    "version": "5.0.0",
     "precious": true,
     "dependencies": {
-        "esp-angular": "~4"
+        "esp-angular": "~5"
     },
     "export": [
         "templates/**"
