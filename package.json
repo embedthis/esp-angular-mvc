@@ -12,7 +12,7 @@
     "export": [
         "client/**",
         "start.me",
-        "templates/**",
+        "generate/**",
     ],
     "client-scripts": [
         "app/main.js",
