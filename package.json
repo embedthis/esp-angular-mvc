@@ -23,7 +23,7 @@
             from: [
                 "css/*",
             ],
-            to: '${JSLIB}/esp-angular-mvc',
+            to: '${LIB}/esp-angular-mvc',
         }, {
             overwrite: false,
             from: [
