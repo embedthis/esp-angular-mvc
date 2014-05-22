@@ -22,7 +22,7 @@ angular.element(document).ready(function() {
 app.config(function($routeProvider) {
     var esp = angular.module('esp');
     $routeProvider.when('/', { 
-        templateUrl: esp.url('/splash.html'),
+        templateUrl: esp.url('/pages/splash.html'),
     });
     // $routeProvider.otherwise({ redirectTo: esp.url('/') });
 });

@@ -50,6 +50,5 @@ angular.module('app').config(function($routeProvider) {
         resolve: { action: 'Esp' },
     };
     $routeProvider.when('/', angular.extend({}, Default, {templateUrl: esp.url('/app/${CONTROLLER}/${CONTROLLER}-list.html')}));
-    $routeProvider.when('/${CONTROLLER}/list', angular.extend({}, Default, {templateUrl: esp.url('/app/${CONTROLLER}/${CONTROLLER}-list.html')}));
     $routeProvider.when('/${CONTROLLER}/:id', angular.extend({}, Default, {templateUrl: esp.url('/app/${CONTROLLER}/${CONTROLLER}-edit.html')}));
 });

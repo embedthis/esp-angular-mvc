@@ -11,12 +11,12 @@ Me.load({
             `,
         },
         run: {
-            depends: ['build-angular-mvc'],
-            run: 'esp -v',
+            depends: ['comp'],
+            run: 'appweb -v',
         },
         cleanCache: {
             type: 'clean',
-            action: `rm('cache/*')`,
+            action: "rm('cache/*')",
         },
     },
 })
