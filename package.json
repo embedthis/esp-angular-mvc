@@ -23,13 +23,14 @@
                 "css/*",
             ],
             to: '${LIB}/esp-angular-mvc',
+            overwrite: true,
         }, {
-            overwrite: false,
             from: [
                 "client/**",
                 "start.me",
             ],
             to: '.',
+            overwrite: false,
         }
     ],
     "app": {
