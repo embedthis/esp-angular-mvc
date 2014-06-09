@@ -4,19 +4,19 @@
 
 Me.load({
     targets: {
-        'build-angular-mvc': {
-            action: `
-                trace('Compile', 'esp compile')
-                run('esp -q compile')
-            `,
-        },
-        run: {
-            depends: ['build-angular-mvc'],
-            run: 'esp -v',
-        },
-        cleanCache: {
-            type: 'clean',
-            action: `rm('cache/*')`,
+        'css': {
+            path: 'client/css/all.css'
+            files: [ 'client/css/all.less' ],
+            build: `
+                let switches = ''
+                Path('client/lib').remove()
+                Path('../../../git').link('client/lib')
+                strace('Run', 'recess ' + switches + ' -compile client/css/all.less')
+                let result = Cmd.run('recess ' + switches + ' -compile client/css/all.less')
+                trace('Generate', TARGET.path)
+                TARGET.path.write(result)
+                Path('client/lib').remove()
+            `
         },
     },
 })
