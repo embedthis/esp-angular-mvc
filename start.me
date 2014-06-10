@@ -13,6 +13,9 @@ Me.load({
                 Path('../../../git').link('client/lib')
                 strace('Run', 'recess ' + switches + ' -compile client/css/all.less')
                 let result = Cmd.run('recess ' + switches + ' -compile client/css/all.less')
+                if (result == '') {
+                    throw 'Cannot build: recess ' + switches + ' -compile client/css/all.less'
+                }
                 trace('Generate', TARGET.path)
                 TARGET.path.write(result)
                 Path('client/lib').remove()
