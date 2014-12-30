@@ -1,11 +1,11 @@
-esp-angular-mvc
+esp-angular-skeleton
 ===
 
-Pak for esp-angular-mvc
+Pak for esp-angular-skeleton
 
 ### To install:
 
-pak install esp-angular-mvc
+pak install esp-angular-skeleton
 
 ### Get Pak from
 

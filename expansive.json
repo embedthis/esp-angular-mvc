@@ -1,0 +1,30 @@
+/*
+    expansive.json - Configuration for esp-angular-scaffold
+ */
+{
+    control: {
+        script: "function menu(item) meta.menu == item ? 'active' : ''"
+    },
+    services: {
+        'clean-css': true,
+        'compile-less-css': {
+            stylesheet: 'css/all.css'
+        }
+    },
+    debug: {
+        services: {
+            'compile-html': false,
+            'compress':     false,
+            'minify-css':   false,
+            'package-ng':   false
+        }
+    },
+    release: {
+        services: {
+            'compile-ng-js': {
+                files: [ 'lib/angular*/**.js', 'lib/esp*/**.js', 'app/**.js' ]
+            },
+            'minify-css': true
+        }
+    }
+}

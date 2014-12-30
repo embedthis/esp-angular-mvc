@@ -1,5 +1,5 @@
 /*
-    ${UMODEL}.js - ${UMODEL} model (esp-angular-mvc)
+    ${UMODEL}.js - ${UMODEL} model (esp-angular-skeleton)
  */
 'use strict';
 

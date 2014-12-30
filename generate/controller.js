@@ -1,5 +1,5 @@
 /*
-    ${UCONTROLLER} Controller (esp-angular-mvc)
+    ${UCONTROLLER} Controller (esp-angular-skeleton)
  */
 
 'use strict';

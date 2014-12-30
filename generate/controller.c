@@ -1,5 +1,5 @@
 /*
-    ${CONTROLLER} Controller (esp-angular-mvc)
+    ${CONTROLLER} Controller (esp-angular-skeleton)
  */
 #include "esp.h"
 
