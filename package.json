@@ -42,7 +42,7 @@
                 "app/*/**.js.ng",
                 "app/*/**.js"
             ]
-        },
+        }
     },
     "blend": [
         "esp.json",
@@ -50,5 +50,6 @@
     ],
     "ignore": [
         "start.me"
-    ]
+    ],
+    "skeleton": true
 }
