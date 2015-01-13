@@ -1,5 +1,5 @@
 /*
-    expansive.json - Configuration for esp-angular-scaffold
+    expansive.json - Configuration for esp-angular-skeleton
  */
 {
     control: {
@@ -14,15 +14,20 @@
     debug: {
         services: {
             'compile-html': false,
-            'compress':     false,
             'minify-css':   false,
+            'minify-js':    false,
             'package-ng':   false
         }
     },
     release: {
         services: {
             'compile-ng-js': {
-                files: [ 'lib/angular*/**.js', 'lib/esp*/**.js', 'app/**.js' ]
+                files: [ 
+                    '**.js',
+                    '!lib/**.js',
+                    'lib/esp*/**.js', 
+                    'lib/angular*/**.js', 
+                ]
             },
             'minify-css': true
         }

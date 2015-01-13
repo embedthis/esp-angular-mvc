@@ -50,7 +50,7 @@ angular.module('app').config(function($routeProvider) {
         resolve: { action: 'Esp' },
     };
     /* Remove this line if the controller should not be active for the home page */
-    $routeProvider.when('/', angular.extend({}, Default, {templateUrl: esp.url('/app/${CONTROLLER}/${CONTROLLER}-list.html')}));
-    $routeProvider.when('/${CONTROLLER}/list', angular.extend({}, Default, {templateUrl: esp.url('/app/${CONTROLLER}/${CONTROLLER}-list.html')}));
-    $routeProvider.when('/${CONTROLLER}/:id', angular.extend({}, Default, {templateUrl: esp.url('/app/${CONTROLLER}/${CONTROLLER}-edit.html')}));
+    $routeProvider.when('/', angular.extend({}, Default, {templateUrl: esp.url('/${CONTROLLER}/list.html')}));
+    $routeProvider.when('/${CONTROLLER}/list', angular.extend({}, Default, {templateUrl: esp.url('/${CONTROLLER}/list.html')}));
+    $routeProvider.when('/${CONTROLLER}/:id', angular.extend({}, Default, {templateUrl: esp.url('/${CONTROLLER}/edit.html')}));
 });

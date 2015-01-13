@@ -32,6 +32,13 @@ static void list${UCONTROLLER}() {
 }
 
 /*
+    Redirect to get a properly terminated URL. Essential for relative URL references.
+ */
+static void redirectPost() {
+    redirect(sjoin(getUri(), "/", NULL));
+}
+
+/*
     Remove a resource identified by the "id" parameter
  */
 static void remove${UCONTROLLER}() { 
@@ -49,13 +56,15 @@ static void update${UCONTROLLER}() {
 /*
     Dynamic module initialization
  */
-ESP_EXPORT int esp_controller_${APP}_${CONTROLLER}(HttpRoute *route, MprModule *module) {
-    espDefineAction(route, "${CONTROLLER}-create", create${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}-get", get${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}-init", init${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}-list", list${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}-remove", remove${UCONTROLLER});
-    espDefineAction(route, "${CONTROLLER}-update", update${UCONTROLLER});
+ESP_EXPORT int esp_controller_${NAME}_${CONTROLLER}(HttpRoute *route, MprModule *module) {
+    espDefineAction(route, "${CONTROLLER}/create", create${UCONTROLLER});
+    espDefineAction(route, "${CONTROLLER}/get", get${UCONTROLLER});
+    espDefineAction(route, "${CONTROLLER}/init", init${UCONTROLLER});
+    espDefineAction(route, "${CONTROLLER}/list", list${UCONTROLLER});
+    espDefineAction(route, "${CONTROLLER}/remove", remove${UCONTROLLER});
+    espDefineAction(route, "${CONTROLLER}/update", update${UCONTROLLER});
+    espDefineAction(route, "${CONTROLLER}/", list${UCONTROLLER});
+    espDefineAction(route, "${CONTROLLER}", redirect${UCONTROLLER});
 ${DEFINE_ACTIONS}    
 #if SAMPLE_VALIDATIONS
     Edi *edi = espGetRouteDatabase(route);

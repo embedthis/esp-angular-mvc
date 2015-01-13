@@ -16,33 +16,31 @@
     ],
     "dependencies": {
         "exp-ng": "~0.1",
-        "exp-js": "~0.1",
-        "exp-less": "~0.1",
-        "exp-css": "~0.1",
+        "exp-js": "~0.2",
+        "exp-less": "~0.2",
+        "exp-css": "~0.2",
         "exp-esp": "~0.1",
-        "exp-gzip": "~0.1",
         "esp-angular": "~5.3",
         "esp-mvc": "~5.3"
     },
     "export": [
         {
             "from": [
-                "documents/**",
                 "layouts/**",
-                "partials/**"
+                "partials/**",
+                "source/**"
             ],
             "to": "${TOP}",
             "overwrite": false
         }
     ],
-    "app": {
-        "esp-angular-skeleton": {
-            "js": [
-                "app/main.js.ng",
-                "app/*/**.js.ng",
-                "app/*/**.js"
-            ]
-        }
+    "render": {
+        "js": [
+            "${TOP}/${SOURCE}/main.js",
+            "${TOP}/${SOURCE}/**.js.ng",
+            "${TOP}/${SOURCE}/**.js",
+            "!${TOP}/${SOURCE}/lib/**.js"
+        ]
     },
     "blend": [
         "esp.json",
@@ -51,5 +49,5 @@
     "ignore": [
         "start.me"
     ],
-    "skeleton": true
+    "mode": "debug"
 }

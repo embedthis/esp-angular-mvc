@@ -3,9 +3,9 @@
 <head>
     <@ partial('header') @>
 </head>
-<body data-config='<% renderConfig(); %> id='body'>
+<body data-config='<% renderConfig(); %> id='body' ng-cloak>
     <@ partial('nav') @>
-    <main class="content" ng-cloak>
+    <main class="container" ng-cloak>
         <@ content @>
     </main>
     <@ partial('footer') @>

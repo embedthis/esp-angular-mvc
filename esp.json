@@ -21,7 +21,6 @@
             "?float": 2
         },
         "-routes": "esp-server",
-        "?routes": "esp-angular-mvc",
-        "xsrf": true
+        "?routes": "esp-restful"
     }
 }
