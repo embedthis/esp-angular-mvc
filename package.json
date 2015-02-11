@@ -2,6 +2,9 @@
     "name": "esp-angular-skeleton",
     "description": "ESP Angular MVC Application Skeleton",
     "version": "5.3.0",
+    "keywords": [
+        "esp"
+    ],
     "licenses": [
         {
             "type": "GPL",
@@ -10,9 +13,6 @@
             "type": "Commercial",
             "url": "https://embedthis.com/licensing/"
         }
-    ],
-    "keywords": [
-        "esp"
     ],
     "dependencies": {
         "exp-ng": "~0.1",
@@ -23,31 +23,41 @@
         "esp-angular": "~5.3",
         "esp-mvc": "~5.3"
     },
-    "export": [
-        {
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/embedthis/esp-angular-skeleton.git"
+    },
+    "ignore": [
+        "start.me"
+    ],
+    "pak": {
+        "blend": {
+            "pak": {
+                "?mode": "debug",
+                "?import": true
+            }
+        },
+        "export": {
             "from": [
-                "layouts/**",
                 "partials/**",
+                "layouts/**",
                 "source/**"
             ],
             "to": "${TOP}",
             "overwrite": false
-        }
-    ],
-    "render": {
-        "js": [
-            "${TOP}/${SOURCE}/main.js",
-            "${TOP}/${SOURCE}/**.js.ng",
-            "${TOP}/${SOURCE}/**.js",
-            "!${TOP}/${SOURCE}/lib/**.js"
-        ]
-    },
-    "blend": [
-        "esp.json",
-        "expansive.json"
-    ],
-    "ignore": [
-        "start.me"
-    ],
-    "mode": "debug"
+        },
+        "manage": [
+            "esp.json",
+            "expansive.json"
+        ],
+        "render": {
+            "js": [
+                "${TOP}/${SOURCE}/main.js",
+                "${TOP}/${SOURCE}/**.js.ng",
+                "${TOP}/${SOURCE}/**.js",
+                "!${TOP}/${SOURCE}/lib/**.js"
+            ]
+        },
+        "version": ">=0.10.0"
+    }
 }

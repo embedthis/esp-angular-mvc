@@ -2,9 +2,6 @@
     expansive.json - Configuration for esp-angular-skeleton
  */
 {
-    control: {
-        script: "function menu(item) meta.menu == item ? 'active' : ''"
-    },
     services: {
         'clean-css': true,
         'compile-less-css': {
