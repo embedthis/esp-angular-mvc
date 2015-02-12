@@ -39,9 +39,9 @@
         },
         "export": {
             "from": [
+                "contents/**",
                 "partials/**",
-                "layouts/**",
-                "source/**"
+                "layouts/**"
             ],
             "to": "${TOP}",
             "overwrite": false
@@ -52,10 +52,10 @@
         ],
         "render": {
             "js": [
-                "${TOP}/${SOURCE}/main.js",
-                "${TOP}/${SOURCE}/**.js.ng",
-                "${TOP}/${SOURCE}/**.js",
-                "!${TOP}/${SOURCE}/lib/**.js"
+                "${TOP}/${CONTENTS}/main.js",
+                "${TOP}/${CONTENTS}/**.js.ng",
+                "${TOP}/${CONTENTS}/**.js",
+                "!${TOP}/${LIB}/**.js"
             ]
         },
         "version": ">=0.10.0"

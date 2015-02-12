@@ -66,11 +66,11 @@ and database migrations.
 * prefix-css.enable &mdash; Enable running autoprefixer on CSS files to handle browser specific extensions.
 * minify-css.enable &mdash; Enable minifying CSS files.
 * minify-js.enable &mdash; Enable minifying script files.
-* minify-js.files &mdash; Array of files to minify. Files are relative to 'source'.
+* minify-js.files &mdash; Array of files to minify. Files are relative to 'contents'.
 * minify-js.compress &mdash; Enable compression of script files.
 * minify-js.mangle &mdash; Enable mangling of Javascript variable and function names.
 * minify-js.dotmin &mdash; Set '.min.js' as the output file extension after minification. Otherwise will be '.js'.
-* minify-js.exclude &mdash; Array of files to exclude from minification. Files are relative to 'source'.
+* minify-js.exclude &mdash; Array of files to exclude from minification. Files are relative to 'contents'.
 * package-ng.exclude &mdash; Package Angular applications into a single Javascript file.
 
 ```
