@@ -17,7 +17,9 @@
                     'lib/angular*/**.js', 
                 ]
             },
-            'minify-css': true
+            "minify-css": {
+                "minify": true
+            }
         }
     }
 }
