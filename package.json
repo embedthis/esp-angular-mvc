@@ -15,13 +15,14 @@
         }
     ],
     "dependencies": {
-        "exp-ng": "~0.1",
-        "exp-js": "~0.2",
-        "exp-less": "~0.2",
-        "exp-css": "~0.2",
-        "exp-esp": "~0.1",
-        "esp-angular": "~5.3",
-        "esp-mvc": "~5.3"
+        "exp-ng": "^0.1",
+        "exp-js": "^0.2",
+        "exp-less": "^0.2",
+        "exp-css": "^0.2",
+        "exp-esp": "^0.1",
+        "angular-bootstrap": "^0.7",
+        "esp-angular": "^5.3",
+        "esp-mvc": "^5.3"
     },
     "repository": {
         "type": "git",
@@ -34,7 +35,32 @@
         "blend": {
             "pak": {
                 "?mode": "debug",
-                "?import": true
+                "?import": true,
+                "?render": {
+                    "js": [
+                        "${TOP}/${CONTENTS}/main.js",
+                        "${TOP}/${CONTENTS}/**.js.ng",
+                        "${TOP}/${CONTENTS}/**.js"
+                    ]
+                },
+                "?override": {
+                    "bootstrap": {
+                        "pak": {
+                            "export": [
+                                "less/**",
+                                { "from": "dist/fonts/**", "trim": 1 }
+                            ]
+                        }
+                    },
+                    "font-awesome": {
+                        "pak": {
+                            "export": [
+                                "less/**",
+                                "fonts/**"
+                            ]
+                        }
+                    }
+                }
             }
         },
         "export": {
@@ -50,14 +76,6 @@
             "esp.json",
             "expansive.json"
         ],
-        "render": {
-            "js": [
-                "${TOP}/${CONTENTS}/main.js",
-                "${TOP}/${CONTENTS}/**.js.ng",
-                "${TOP}/${CONTENTS}/**.js",
-                "!${TOP}/${LIB}/**.js"
-            ]
-        },
         "version": ">=0.10.0"
     }
 }

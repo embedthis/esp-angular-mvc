@@ -2,24 +2,33 @@
     expansive.json - Configuration for esp-angular-skeleton
  */
 {
+    "services": {
+        "clean-css": true
+    },
     debug: {
         services: {
-            'package-ng':   false
+            "compress": false,
+            "ng-compile-html": false,
+            "ng-package": false
         }
     },
     release: {
         services: {
-            'compile-ng-js': {
-                files: [ 
-                    '**.js',
-                    '!lib/**.js',
-                    'lib/esp*/**.js', 
-                    'lib/angular*/**.js', 
-                ]
+            "compress": false,
+            "minify-js": {
+                "usemap": false
             },
             "minify-css": {
                 "minify": true
-            }
+            },
+            "ng-compile-js": {
+                "files": [
+                    "contents/**.js",
+                    "lib/esp*/**.js",
+                    "lib/angular*/**.js"
+                ]
+            },
+            "ng-package": true
         }
     }
 }
