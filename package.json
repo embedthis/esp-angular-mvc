@@ -48,7 +48,14 @@
                         "pak": {
                             "export": [
                                 "less/**",
-                                { "from": "dist/fonts/**", "trim": 1 }
+                                { 
+                                    "from": [
+                                        "dist/fonts/*.eot",
+                                        "dist/fonts/*.woff",
+                                        "dist/fonts/*.ttf"
+                                    ],
+                                    "trim": 1 
+                                }
                             ]
                         }
                     },
@@ -56,7 +63,13 @@
                         "pak": {
                             "export": [
                                 "less/**",
-                                "fonts/**"
+                                {
+                                    "from": [
+                                        "fonts/*.eot",
+                                        "fonts/*.woff",
+                                        "fonts/*.ttf"
+                                    ]
+                                }
                             ]
                         }
                     }
