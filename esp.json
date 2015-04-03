@@ -1,8 +1,8 @@
 {
     "esp": {
         "generate": {
-            "-controller": "esp-skeleton/generate/controller.c",
-            "-controllerSingleton": "esp-skeleton/generate/controllerSingleton.c",
+            "-controller": "esp-mvc/generate/controller.c",
+            "-controllerSingleton": "esp-mvc/generate/controllerSingleton.c",
 
             "?clientModel": "esp-angular-skeleton/generate/model.js",
             "?clientController": "esp-angular-skeleton/generate/controller.js",
