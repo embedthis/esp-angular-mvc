@@ -34,7 +34,7 @@ static void list${UCONTROLLER}() {
 /*
     Redirect to get a properly terminated URL. Essential for relative URL references.
  */
-static void redirectPost() {
+static void redirect${UCONTROLLER}() {
     redirect(sjoin(getUri(), "/", NULL));
 }
 
