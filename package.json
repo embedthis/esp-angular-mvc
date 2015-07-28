@@ -15,7 +15,7 @@
         }
     ],
     "dependencies": {
-        "exp-ng": "~0.1",
+        "exp-angular": "~0.1",
         "angular-bootstrap": "~0.7",
         "esp-angular": "~5.4",
         "esp-mvc": "~5.4"
