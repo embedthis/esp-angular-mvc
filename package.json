@@ -1,7 +1,7 @@
 {
     "name": "esp-angular-skeleton",
     "description": "ESP Angular MVC Application Skeleton",
-    "version": "5.4.2",
+    "version": "5.4.3",
     "keywords": [
         "esp"
     ],
@@ -9,7 +9,8 @@
         {
             "type": "GPL",
             "url": "http://www.gnu.org/licenses/gpl-2.0.html"
-        }, {
+        },
+        {
             "type": "Commercial",
             "url": "https://embedthis.com/licensing/"
         }
@@ -44,13 +45,13 @@
                         "pak": {
                             "export": [
                                 "less/**",
-                                { 
+                                {
                                     "from": [
                                         "dist/fonts/*.eot",
                                         "dist/fonts/*.woff*",
                                         "dist/fonts/*.ttf"
                                     ],
-                                    "trim": 1 
+                                    "trim": 1
                                 }
                             ]
                         }
