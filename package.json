@@ -33,6 +33,9 @@
     ],
     "pak": {
         "blend": {
+            "devDependencies": {
+                "?esp": "~6.x"
+            },
             "pak": {
                 "?mode": "debug",
                 "?import": true,
