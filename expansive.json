@@ -19,6 +19,12 @@
     debug: {
         services: {
             "?compress": false,
+            "html": false,
+            "?js": {
+                "?minify": false,
+                "?usemin": true,
+                "?usemap": true
+            },
             "?ng-compile-html": false,
             "?ng-package": false
         }

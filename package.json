@@ -39,6 +39,9 @@
                 "?expansive": ">=0.6.0",
                 "?esp": "~6.x"
             },
+            "directories": {
+                "?export": "contents/lib"
+            },
             "pak": {
                 "?mode": "debug",
                 "?import": true,
