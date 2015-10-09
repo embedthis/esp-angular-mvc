@@ -19,7 +19,7 @@
     debug: {
         services: {
             "?compress": false,
-            "html": false,
+            "?html": false,
             "?js": {
                 "?minify": false,
                 "?usemin": true,
@@ -32,12 +32,12 @@
     release: {
         services: {
             "?compress": true,
-            "css": {
+            "?css": {
                 "?minify": true,
                 "?usemin": true,
                 "?usemap": false
             },
-            "js": {
+            "?js": {
                 "?minify": true,
                 "?usemin": true,
                 "?usemap": false
