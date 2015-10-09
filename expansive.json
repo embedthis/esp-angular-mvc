@@ -8,9 +8,13 @@
             "compile-esp",
             "compress",
         ],
-    },
-    "services": {
-        "?clean-css": true
+        "?render": {
+            "?js": [
+                "main.js",
+                "**.js.ng",
+                "**.js"
+            ]
+        },
     },
     debug: {
         services: {
@@ -22,20 +26,27 @@
     release: {
         services: {
             "?compress": true,
-            "ng-compile-js": {
+            "css": {
+                "?minify": true,
+                "?usemin": true,
+                "?usemap": false
+            },
+            "js": {
+                "?minify": true,
+                "?usemin": true,
+                "?usemap": false
+            },
+            "?ng-compile-js": {
                 "?files": [
-                    "contents/**.js",
-                    "lib/esp*/**.js",
-                    "lib/angular*/**.js"
+                    "**.js",
+                    "!lib/**.js",
+                    "lib/angular*/**.js",
+                    "lib/esp*/**.js"
                 ]
             },
-            "?ng-package": true,
-            "render-css": {
-                "?usemap": false,
-                "?usemin": true
-            },
-            "render-js": {
-                "?usemap": false
+            "?ng-package": {
+                "?minify": true,
+                "?dotmin": true
             }
         }
     }
