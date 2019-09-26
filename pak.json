@@ -2,6 +2,7 @@
     "name": "esp-angular-skeleton",
     "description": "ESP Angular MVC Application Skeleton",
     "version": "5.5.2",
+    "warn": "This pak uses Angular 1 which is no longer supported.",
     "keywords": [
         "esp"
     ],
@@ -16,11 +17,11 @@
         }
     ],
     "dependencies": {
-        "exp-gzip": "~0.3",
-        "angular-bootstrap": "~0.7",
-        "exp-angular": "~0.2",
-        "esp-angular": "~5.5",
-        "esp-mvc": "~5.5"
+        "embedthis/exp-gzip": "~0.3",
+        "embedthis/angular-bootstrap": "~0.7",
+        "embedthis/exp-angular": "~0.2",
+        "embedthis/esp-angular": "~5.5",
+        "embedthis/esp-mvc": "~5.5"
     },
     "devDependencies": {
         "expansive": ">=0.6.0",
